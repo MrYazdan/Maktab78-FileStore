@@ -4,3 +4,9 @@ DB_CONNECTION = {
     "PORT": 5432,
     "PASSWORD": ""
 }
+
+INFO = {
+    "name": "Maktab File Store",
+    "description": "...",
+    "version": "1.0.0",
+}
