@@ -2,6 +2,10 @@ from core.utils import clear
 from importlib import import_module
 
 
+class Config:
+    parent = None
+
+
 class CallBack:
     """
         ...
@@ -26,11 +30,20 @@ class Route:
         self.description = description
         self.callback = callback
         # ...
+        self.children = None
         if not callback: self.children = children
 
     def run(self):
         # ...
+
+        clear()
+        print(self.name)
+        print(self.description or "\n")
+
         if children := self.children:
+
+            Config.parent = self
+
             for child in children:
                 child: Route
                 print(f"{children.index(child) + 1}. {child.name}")
@@ -46,6 +59,10 @@ class Route:
             self.callback: CallBack
             self.callback.call()
 
+        if Config.parent:
+            input("Press enter to back menu")
+            Config.parent.run()
+
 
 class Router:
     """
@@ -58,5 +75,6 @@ class Router:
 
     def generate(self) -> None:
         clear()
+        Config.parent = self.route
         self.route.run()
         # ...
