@@ -1,3 +1,4 @@
-# فروشگاه فایل مکتب ۷۸
-**دومین میکرو پروژه پایتون خام (پایانی پایتون - قبل از فلسک)**
----
+# :teacher: The template of the second Python micro project
+:loudspeaker:	According to the exercise included in the Telegram channel, edit and complete the above template.
+
+> Memory: Teaching Python Bootcamp - maktab-78 - [maktab sharif academy](https://maktabsharif.ir)
